@@ -1,51 +1,130 @@
-/* Use a modern, easy-to-read font for the whole page */
+/* Use a modern, easy-to-read font */
 body {
-	font-family: Arial, Helvetica, sans-serif;
-	margin: 0;
-	padding: 0;
-	background: #eaf6fb; /* Light blue background for the page */
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #e6f7fa; /* Light blue background for the page */
 }
 
-/* Style the CTA banner section */
+/* Simple header styling */
+.site-header {
+  background-color: #1a7fa3; /* Deep blue to match the palette */
+  color: #ffffff;
+  text-align: center;
+  padding: 18px 0;
+  /* Add a little shadow for separation */
+  box-shadow: 0 2px 6px rgba(44, 130, 201, 0.08);
+}
+
+/* Header text style */
+.site-header h2 {
+  margin: 0;
+  font-size: 1.6em;
+  letter-spacing: 2px;
+}
+
+/* Style for the CTA banner with background image and overlay */
 .cta-banner {
-	background-color: #1e6f8f; /* Deep blue background */
-	color: #ffffff;
-	text-align: center;
-	padding: 60px 20px; /* Make the banner tall and spacious */
-	border-radius: 0 0 24px 24px; /* Soft rounded bottom corners */
-	box-shadow: 0 4px 16px rgba(30, 111, 143, 0.1); /* Subtle shadow for depth */
-	margin-bottom: 32px;
+  background-image: url('img/cta-bg.jpg');
+  background-size: cover; /* Make the image cover the banner */
+  background-position: center; /* Center the image */
+  color:  #ffffff; /* White text for contrast */
+  padding: 60px 20px; /* Tall banner with space around content */
+  text-align: center;
+  border-radius: 8px; /* Slightly rounded corners */
+  margin: 40px auto;
+  max-width: 600px;
+  /* Soft shadow for depth */
+  box-shadow: 0 4px 12px rgba(44, 130, 201, 0.15);
+  position: relative; /* Needed for overlay */
+  /* Add a light overlay using a semi-transparent background color */
+  background-color: rgba(26, 127, 163, 0.7); /* Teal overlay */
+  /* The overlay is achieved by combining background image and color */
+  background-blend-mode: lighten;
 }
 
-/* Large, bold heading for the CTA */
+/* Large main heading */
 .cta-banner h1 {
-	font-size: 2.5em;
-	margin-bottom: 16px;
-	color: #66350c; /* Light teal for the heading */
+  font-size: 2em;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
 }
 
-/* Short description under the heading */
+/* Short description */
 .cta-banner p {
-	font-size: 1.2em;
-	margin-bottom: 28px;
-	color: #e0fbfc; /* Very light blue for description */
+  font-size: 1.1em;
+  margin-bottom: 30px;
 }
 
-/* Eye-catching CTA button */
+/* Eye-catching button */
 .cta-button {
-	display: inline-block;
-	background-color: #3ed6cb; /* Bright teal button */
-	color: #155263;
-	padding: 16px 36px;
-	font-size: 1.1em;
-	font-weight: bold;
-	text-decoration: none;
-	border-radius: 8px;
-	box-shadow: 0 2px 8px rgba(62, 214, 203, 0.15);
-	transition: background 0.2s;
+  display: inline-block;
+  background-color: #1a7fa3; /* Deep blue for button */
+  color: #ffffff;
+  padding: 14px 32px;
+  text-decoration: none;
+  font-size: 1.1em;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  /* Make the button stand out */
+  box-shadow: 0 2px 8px rgba(44, 130, 201, 0.18);
 }
 
+/* Button hover effect */
 .cta-button:hover {
-	background-color: #23b5af; /* Slightly darker teal on hover */
-	color: #fff;
+  background-color: #1596b7; /* Slightly lighter blue */
+  box-shadow: 0 4px 12px rgba(44, 130, 201, 0.25);
+  transform: translateY(-2px); /* Slight lift on hover */
+  transition: all 0.3s ease;
+}
+
+/* Info section with image and text in two columns using basic CSS */
+.info-section {
+  max-width: 700px;
+  margin: 40px auto;
+  background: #ffffff;              /* White background for contrast */
+  border-radius: 8px;               /* Rounded corners */
+  box-shadow: 0 2px 8px rgba(44, 130, 201, 0.10); /* Soft shadow */
+  padding: 20px;
+  text-align: center;               /* Center content for beginners */
+  display: table;                   /* Use table display for two columns */
+  width: 100%;
+}
+
+/* Info text styles */
+.info-text {
+  display: table-cell;              /* Table cell for column layout */
+  vertical-align: middle;           /* Vertically center text */
+  width: 50%;
+  text-align: left;                 /* Align text to the left */
+  padding-left: 20px;
+}
+
+/* Make the info-section image larger for better visibility */
+.info-image {
+  display: table-cell;
+  vertical-align: middle;
+  width: 80%;           /* Increase width for a larger image */
+  max-width: 300px;     /* Allow a bigger maximum size */
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+/* Responsive: stack columns on small screens */
+@media (max-width: 600px) {
+  .info-section {
+    display: block;
+    padding: 10px;
+  }
+  .info-image,
+  .info-text {
+    display: block;
+    width: 100%;
+    max-width: none;
+    margin: 0 auto 16px auto;
+    padding-left: 0;
+    text-align: center;
+  }
 }
